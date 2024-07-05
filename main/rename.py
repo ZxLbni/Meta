@@ -64,7 +64,7 @@ async def display_bot_settings_inline(msg):
     
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],            
+            [InlineKeyboardButton("💠", callback_data="NOOBPrivate")],            
             [InlineKeyboardButton(f"{rename_status} Change Rename 📝", callback_data="toggle_rename")],
             [InlineKeyboardButton(f"{removealltags_status} Remove All Tags 📛", callback_data="toggle_removealltags")],
             [InlineKeyboardButton(f"{metadata_status} Change Metadata ☄️", callback_data="toggle_metadata")],            
@@ -73,7 +73,7 @@ async def display_bot_settings_inline(msg):
             [InlineKeyboardButton(f"{photo_attach_status} Attach Photo 🖼️", callback_data="toggle_photo_attach")],                        
             [InlineKeyboardButton(f"{multitask_status} Multi task 📑", callback_data="toggle_multitask")],            
             [InlineKeyboardButton("Close ❌", callback_data="del")],
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")]
+            [InlineKeyboardButton("💠", callback_data="NOOBPrivate")]
         ]
     )
 
@@ -141,9 +141,9 @@ async def toggle_merge_video_callback(_, callback_query):
     MERGE_ENABLED = not MERGE_ENABLED
     await update_settings_message(callback_query.message)
     
-# Callback query handler for the "sunrises24_bot_updates" button
-@Client.on_callback_query(filters.regex("^sunrises24_bot_updates$"))
-async def sunrises24_bot_updates_callback(_, callback_query):
+# Callback query handler for the "NOOBPrivate" button
+@Client.on_callback_query(filters.regex("^NOOBPrivate$"))
+async def NOOBPrivate_callback(_, callback_query):
     await callback_query.answer("MADE BY @SUNRISES24BOTUPDATES ❤️", show_alert=True)    
 
 
@@ -160,7 +160,7 @@ async def update_settings_message(message):
       
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],            
+            [InlineKeyboardButton("💠", callback_data="NOOBPrivate")],            
             [InlineKeyboardButton(f"{rename_status} Change Rename 📝", callback_data="toggle_rename")],
             [InlineKeyboardButton(f"{removealltags_status} Remove All Tags 📛", callback_data="toggle_removealltags")],
             [InlineKeyboardButton(f"{metadata_status} Change Metadata ☄️", callback_data="toggle_metadata")],            
@@ -169,7 +169,7 @@ async def update_settings_message(message):
             [InlineKeyboardButton(f"{photo_attach_status} Attach Photo 🖼️", callback_data="toggle_photo_attach")],                        
             [InlineKeyboardButton(f"{multitask_status} Multi task 📑", callback_data="toggle_multitask")],            
             [InlineKeyboardButton("Close ❌", callback_data="del")],
-            [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")]
+            [InlineKeyboardButton("💠", callback_data="NOOBPrivate")]
         ]
     )
 
@@ -216,7 +216,7 @@ async def display_user_settings(client, msg, edit=False):
     current_screenshots = user_settings.get(user_id, {}).get("screenshots", "Not set")
 
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],
+        [InlineKeyboardButton("💠", callback_data="NOOBPrivate")],
         [InlineKeyboardButton("Sample Video Settings 🎞️", callback_data="sample_video_option")],
         [InlineKeyboardButton("Screenshots Settings 📸", callback_data="screenshots_option")],
         [InlineKeyboardButton("Thumbnail Settings 📄", callback_data="thumbnail_settings")],
@@ -231,7 +231,7 @@ async def display_user_settings(client, msg, edit=False):
         [InlineKeyboardButton("Preview Index task ♻️", callback_data="preview_change_index_task")],
         [InlineKeyboardButton("Preview Merge Video task 🎞️", callback_data="preview_merge_video_task")],
         [InlineKeyboardButton("Preview Remove Tags task 📛", callback_data="preview_removetags_task")],
-        [InlineKeyboardButton("💠", callback_data="sunrises24_bot_updates")],
+        [InlineKeyboardButton("💠", callback_data="NOOBPrivate")],
         [InlineKeyboardButton("Close ❌", callback_data="del")]
     ])
     if edit:
