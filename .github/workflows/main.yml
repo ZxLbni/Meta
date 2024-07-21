@@ -1,0 +1,23 @@
+name: aptible
+
+on:
+  push:
+    branches: [SH24BOTS-PVT
+default]
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Deploy to Aptible
+      uses: aptible/aptible-deploy-action@v4
+      with:
+        type: git
+        app: sukun
+        environment: sukun
+        username: ${{ secrets.APTIBLE_USERNAME }}
+        password: ${{ secrets.APTIBLE_PASSWORD }}
