@@ -17,7 +17,7 @@ jobs:
       uses: aptible/aptible-deploy-action@v4
       with:
         type: git
-        app: sukun
-        environment: sukun
+        app: metax
+        environment: metax
         username: ${{ secrets.APTIBLE_USERNAME }}
         password: ${{ secrets.APTIBLE_PASSWORD }}
